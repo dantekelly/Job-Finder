@@ -1,0 +1,14 @@
+section {
+  background-color: #F5F5F5; }
+
+ng-results {
+  color: #333;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 400; }
+  ng-results a, ng-results a:link, ng-results a:visited {
+    color: #069;
+    text-decoration: none; }
+    ng-results a:hovered, ng-results a:link:hovered, ng-results a:visited:hovered {
+      text-decoration: underline; }
+
+/*# sourceMappingURL=results.css.map */

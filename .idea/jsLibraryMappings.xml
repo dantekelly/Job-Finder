@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <file url="file://$PROJECT_DIR$/scripts/app/controllers/app.js" libraries="{angularjs-DefinitelyTyped}" />
+    <file url="file://$PROJECT_DIR$/scripts/app/directives/results.js" libraries="{angularjs-DefinitelyTyped}" />
+    <file url="file://$PROJECT_DIR$/scripts/app/views/results.html" libraries="{angular2, angularjs-DefinitelyTyped}" />
+    <file url="PROJECT" libraries="{angular2}" />
+  </component>
+</project>

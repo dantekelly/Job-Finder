@@ -1,0 +1,73 @@
+<html ng-app="countryApp">
+    <head>
+        <meta charset="utf-8">
+        <title>Angular.js JSON Fetching Example</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+        <script>
+            var countryApp = angular.module('countryApp', []);
+            countryApp.controller('CountryCtrl', function ($scope, $http){
+                //$http.get('scripts/apisearch.json').success(function(data) {
+                //    $scope.countries = data;
+                //});
+
+                $http({
+                    method: 'GET',
+                    url: 'http://api.indeed.com/ads/apisearch',
+                    params: {
+                        publisher: 1345414146707985,
+                        q: 'java',
+                        l: 'austin%2C+tx',
+                        sort: '',
+                        radius:'',
+                        st: '',
+                        jt: '',
+                        start: '',
+                        limit: '',
+                        fromage: '',
+                        filter: '',
+                        latlong: 1,
+                        co: 'us',
+                        chnl: '',
+                        userip: '1.2.3.4',
+                        useragent: 'Mozilla/%2F4.0%28Firefox%29',
+                        v: 2,
+                        format: 'json'
+                    }
+                }).success(function(data){
+                    $scope.countries = data;
+                }).error(function(){
+                    alert("error");
+                    //let the function caller know the error
+                    deferred.reject(error);
+                });
+
+                //$http({
+                //    method: 'GET',
+                //    url: 'http://api.indeed.com/ads/apisearch?publisher=1345414146707985&q=java&l=austin%2C+tx&sort=&radius=&st=&jt=&start=&limit=&fromage=&filter=&latlong=1&co=us&chnl=&userip=1.2.3.4&useragent=Mozilla/%2F4.0%28Firefox%29&v=2&format=json'
+                //}).success(function(data) {
+                //    $scope.countries = data;
+                //});
+
+                //$http.get('http://api.indeed.com/ads/apisearch?publisher=1345414146707985&q=java&l=austin%2C+tx&sort=&radius=&st=&jt=&start=&limit=&fromage=&filter=&latlong=1&co=us&chnl=&userip=1.2.3.4&useragent=Mozilla/%2F4.0%28Firefox%29&v=2&format=json').success(function(data) {
+                //    $scope.countries = data;
+                //});
+            });
+        </script>
+    </head>
+    <body ng-controller="CountryCtrl">
+        <h2>Angular.js JSON Fetching Example</h2>
+        <table>
+            <tr>
+                <th>Code</th>
+                <th>Country</th>
+                <th>Population</th>
+            </tr>
+            <tr ng-repeat="country in countries.results">
+                <td>{{country.company}}</td>
+                <td>{{country.company}}</td>
+                <td>{{country.company}}</td>
+            </tr>
+        </table>
+    </body>
+</html>
