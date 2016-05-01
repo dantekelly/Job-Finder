@@ -19,8 +19,9 @@
         });
 
         $scope.anableCustomerDirective = false;
-        $scope.showdiv = function(){
+        $scope.showdiv = function() {
           $scope.enableCustomerDirective = true;
+          $('section').addClass('enabled');
         };
 
         $scope.distance = function(lat1, lon1) {

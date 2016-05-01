@@ -46,9 +46,4 @@ $(document).ready(function() {
       // v=2&
       // format=json
   }
-  $('button').click(function() {
-    //alert('Clicked');
-    //$(this).find('ul').slideToggle();
-    //findJob();
-  });
 });
