@@ -1,0 +1,8 @@
+<div ng-repeat="result in results" ng-if='enableCustomerDirective'>
+    <a href={{result.url}}> {{result.jobtitle}} </a>
+    <h5 class="snippet" ng-bind-html="result.snippet | html"></h5>
+    <h5 class="inline"> {{result.company}} </h5>
+    <h5 class="inline"> {{result.formattedLocationFull}} </h5>
+    <h5 class="inline"> {{result.formattedRelativeTime}} </h5>
+    <div class="divider"></div>
+</div>

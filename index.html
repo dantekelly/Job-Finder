@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="main">
+    <head>
+        <meta charset="utf-8">
+        <title> Web Developer Jobs </title>
+        <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/results.css">
+        <script src="scripts/library/jquery-2.2.3.min.js"></script>
+        <script src="scripts/library/angular.min.js"></script>
+        <script src="scripts/app/controllers/app.js"></script>
+        <script src="scripts/app/directives/results.js"></script>
+    </head>
+    <body>
+        <header>
+            <div id="hamburger">
+                <ul>
+                    <li><a href="#">Main</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <img src="media/JavaScript.svg">
+            <h1> Looking to advance your career? </h1>
+            <h2> Stop Procrastinating and work for it! </h2>
+            <form ng-controller="SearchController">
+                <div class="text_element">
+                    <input name="text" ng-model="querp.keywords" placeholder="jQuery, Junior, React, Angular" id="keyword" required/>
+                    <label for="keyword"> Keywords separated by commas </label>
+                </div>
+                <div class="text_element">
+                    <input name="text" ng-model="querp.location" placeholder="Los Angeles 50 miles; Seattle 10 miles" id="location" required/>
+                    <label for="location"> Smegma. </label>
+                </div>
+                <button type="submit" ng-click="setQuery(); getAPI(); showdiv()">Release the hounds</button>
+            </form>
+        </header>
+        <section>
+            <ng-results></ng-results>
+        </section>
+        <footer>
+            <h5> Web Developer Job Finder v1.0.0 </h5>
+            <h3> Built by Dante Kelly </h3>
+            <h4> Inspired by <a href="https://twitter.com/yakkieyip">Jackie Yip's</a> <a href="http://jackieyip.com/jsjobs/">JS Jobs project</a> </h4>
+        </footer>
+        <script src="scripts/geolocation.js"></script>
+        <script src="scripts/main.js"></script>
+    </body>
+</html>
