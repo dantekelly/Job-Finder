@@ -62,6 +62,7 @@
         $scope.showdiv = function() {
           $scope.enableCustomerDirective = true;
           $('section').addClass('enabled');
+          $('header').removeClass('long');
         };
 
         $scope.distance = function(lat1, lon1) {

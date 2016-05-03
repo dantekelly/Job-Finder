@@ -1,3 +1,10 @@
-
+@media screen and (max-width: 768px) {
+  .text_element {
+    margin: 2em 0; }
+    .text_element input {
+      margin: 0 auto;
+      font-size: 3em; }
+    .text_element label {
+      font-size: 2em; } }
 
 /*# sourceMappingURL=responsive.css.map */
