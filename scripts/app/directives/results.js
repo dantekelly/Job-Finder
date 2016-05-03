@@ -37,9 +37,9 @@
       restrict: 'AE',
       templateUrl: 'scripts/app/views/results.html',
       controller:function($scope, $http, queryService){
-        $scope.querp = {radius: 50};
         $scope.keywords = 'heroppppn';
-        $scope.location = '';
+        $scope.location = $('#location').val()  ;
+        $scope.querp = {radius: 50, location: $scope.location};
 
         queryService.setQuery($scope.querp);
 

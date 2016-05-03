@@ -15,7 +15,7 @@ $(document).ready(function(){
         for(i=0;i<addressComponents.length;i++){
           var types = addressComponents[i].types;
           if(types=="locality,political"){
-            $('#location').val(addressComponents[i].long_name + ', ' + addressComponents[i+2].short_name + ' 50 Miles');
+            $('#location').val(addressComponents[i].long_name + ', ' + addressComponents[i+2].short_name);
             //addressComponents[i].long_name + ', ' + addressComponents[i+2].short_name);
             //result = (addressComponents[i].long_name + ', ' + addressComponents[i+2].short_name);
             //callback.apply(this,result);
