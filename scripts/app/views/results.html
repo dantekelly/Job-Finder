@@ -1,4 +1,4 @@
-<div ng-repeat="result in results" ng-if='enableCustomerDirective'>
+<div ng-repeat="result in results" ng-if='enableResults'>
     <a target="_blank" href={{result.url}}> {{result.jobtitle}} </a>
     <h5 class="snippet" ng-bind-html="result.snippet | html"></h5>
     <h5 class="inline"> {{result.company}} </h5>

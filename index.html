@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="main">
+<html ng-app="results">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,24 +12,25 @@
         <script src="scripts/library/jquery-2.2.3.min.js"></script>
         <script src="scripts/geolocation.js"></script>
         <script src="scripts/library/angular.min.js"></script>
-        <script src="scripts/app/controllers/app.js"></script>
         <script src="scripts/app/directives/results.js"></script>
+        <script src="scripts/app/services/searchQuery.js"></script>
+        <script src="scripts/app/filters/html.js"></script>
     </head>
     <body>
         <header class="long">
             <div id="wrapper">
                 <img src="media/code-icon.png">
                 <h1> Looking to advance your career? </h1>
-                <form ng-controller="SearchController">
+                <form>
                     <div class="text_element">
-                        <input name="text" ng-model="querp.keywords" placeholder="jQuery, Junior, React, Angular" id="keyword" required/>
+                        <input name="text" ng-model="searchParams.keywords" placeholder="jQuery, Junior, React, Angular" id="keyword" required/>
                         <label for="keyword"> Keywords separated by commas </label>
                     </div>
                     <div class="text_element">
-                        <input name="text" ng-model="querp.location" placeholder="Los Angeles 50 miles; Seattle 10 miles" id="location" required/>
+                        <input name="text" ng-model="searchParams.location" placeholder="Los Angeles 50 miles; Seattle 10 miles" id="location" required/>
                         <label for="location"> zip code or city, state</label>
                     </div>
-                    <button type="submit" ng-click="setQuery(); getAPI(); showdiv()">Release the hounds</button>
+                    <button type="submit" ng-click="getAPI(); showResults()">Release the hounds</button>
                 </form>
             </div>
         </header>

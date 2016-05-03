@@ -1,4 +1,5 @@
-(function() {
-  var app = angular.module('main', ['results']);
-
-})();
+//(function() {
+//  var app = angular.module('main', ['results', 'searchQuery', 'htmlFilter']);
+//
+//  
+//})();
